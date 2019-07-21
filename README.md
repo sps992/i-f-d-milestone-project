@@ -1,32 +1,41 @@
-# Your Project's Name
+# Surviving Game Of Thrones
 
-One or two paragraphs providing an overview of your project.
-
-Essentially, this part is your sales pitch.
+After the hurricane of the Game of Thrones series finale, what a better way to wrap it all up than with an interactive dashboard. Illustrating the deaths and surviving characters of the series, in well presented graphs.
  
 ## UX
+
+This website is designed for any GOT fan looking to keep the series alive by analysing the mortality of their favourite characters. I plan to do this by providing nicely presented graphs sprinkled with fun GOT facts. I think this will be a great way for fans to relive their favourite scenes in their heads and to better understand who died and who survived, whilst learning more about the series along the way.
+
+ ### User Stories
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+ EXAMPLE FORMAT{ As a user type, I want to perform an action, so that I can achieve a goal.}
+ 
+- As someone who has watched the series, I want to know more about who is still alive, so that I can better understand what actually happened and why certain characters are so important to the plot.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+-As a big nerd, I want to find out more about who died and how many of each house is still alive, So I can quence my undying thirst for the series until the prequel comes out next year.
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+-As someone who has watched a season, I want to view content that is entertaining and interesting, So I can decide whether to continue watching the series.
+
+
+#### Wireframes
+
+Demonstrating best web practice, I have created wireframes to shape the initial skeleton of the website and where the content could be placed. This is done to understand the space limitations and how to make the website userfriendly and offer the best user experience as possible.
+'Wireframes' folder in my git repository:
+https://github.com/sps992/i-f-d-milestone-project/tree/master/static/wireframes
+
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+Hero image - 
+Custom Fav Icon -
+Interactive Graphs -
+
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
-- Another feature idea
+Parallax sections
 
 ## Technologies Used
 
