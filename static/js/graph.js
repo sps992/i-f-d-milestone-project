@@ -36,7 +36,7 @@ function show_death_stats(ndx) {
         .width(300)
         .height(300)
         .x(d3.scale.ordinal())
-        .margins({top: 10, right: 50, bottom: 30, left: 50})
+        .margins({top: 10, right: 50, bottom: 50, left: 50})
         .dimension(dim)
         .group(group)
         .transitionDuration(500)
@@ -59,3 +59,5 @@ function show_group_by_surname(ndx) {
         
         
 }
+
+
