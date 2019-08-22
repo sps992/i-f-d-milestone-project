@@ -1,7 +1,9 @@
 # Surviving Game Of Thrones
 
 After the hurricane of the Game of Thrones series finale, what a better way to wrap it all up than with an interactive dashboard. Illustrating the deaths and surviving characters of the series, in well presented graphs.
- 
+# Visit the project live here...
+https://sps992.github.io/i-f-d-milestone-project/
+
 ## UX
 
 This website is designed for any GOT fan looking to keep the series alive by analysing the mortality of their favourite characters. I plan to do this by providing nicely presented graphs sprinkled with fun GOT facts. I think this will be a great way for fans to relive their favourite scenes in their heads and to better understand who died and who survived, whilst learning more about the series along the way.
