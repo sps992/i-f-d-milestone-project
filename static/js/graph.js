@@ -5,12 +5,37 @@ queue()
     
 function makeGraphs(error, characterData) {
     var ndx = crossfilter(characterData);
-    show_pieGenderSelector(ndx)
+    
+    characterData.forEach(function(d){
+        d.ScreenTime = parseInt(d["ScreenTime"]);
+    })
+    show_pieGenderSelector(ndx);
     show_death_stats(ndx);
     show_group_by_surname(ndx);
-    
+    show_higher_class_title(ndx);
+    show_screen_time(ndx);
     dc.renderAll();
 }
+
+
+
+
+function reset_graphs(){
+    d3.selectAll("svg").remove();
+   
+
+}
+
+
+$('#reset').click(function(e){
+
+    e.preventDefault();
+
+    reset_graphs();
+    
+
+});
+
 
 
 function show_pieGenderSelector(ndx){
@@ -22,7 +47,7 @@ function show_pieGenderSelector(ndx){
     .height(300)
     .dimension(dim)
     .group(group)
-    .transitionDuration(500)
+    .transitionDuration(500);
     
 }
 
@@ -61,3 +86,111 @@ function show_group_by_surname(ndx) {
 }
 
 
+function show_higher_class_title(ndx){
+    var  dim = ndx.dimension(dc.pluck('Gender'));
+
+    var kingQueenByGender = dim.group().reduce(
+        function (p, v) {
+            p.total++;
+            if(v.rank == "King / Queen") {
+                p.match++;
+            }
+            return p;
+        },
+        function (p, v) {
+            p.total--;
+            if(v.rank == "King / Queen") {
+                p.match--;
+            }
+            return p;
+        },
+        function () {
+            return {total: 0, match: 0};
+        }
+    );
+
+    function rankByGender (dimension, Title) {
+        return dimension.group().reduce(
+            function (p, v) {
+                p.total++;
+                if(v.Title == Title) {
+                    p.match++;
+                }
+                return p;
+            },
+            function (p, v) {
+                p.total--;
+                if(v.Title == Title) {
+                    p.match--;
+                }
+                return p;
+            },
+            function () {
+                return {total: 0, match: 0};
+            }
+        );
+    }
+
+    var royaltyByGender = rankByGender(dim, "King / Queen");
+    var lordByGender = rankByGender(dim, "Lord / Lady");
+    var civilianByGender = rankByGender(dim, "civilian");
+    
+    console.log(kingQueenByGender.all());
+    
+    dc.barChart("#titleSelector")
+        .width(300)
+        .height(350)
+        .dimension(dim)
+        .group(royaltyByGender, "King / Queen")
+        .stack(lordByGender, "Lord / Lady")
+        .stack(civilianByGender, "civilian")
+        .valueAccessor(function(d) {
+            if(d.value.total > 0) {
+                return (d.value.match / d.value.total) * 100;
+            } else {
+                return 0;
+            }
+        })
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .legend(dc.legend().x(215).y(20).itemHeight(15).gap(5))
+        .margins({top: 10, right: 100, bottom: 30, left: 30});
+    
+}
+
+
+     function show_screen_time(ndx){
+        var eDim = ndx.dimension(dc.pluck("Screentime"));
+        var experienceDim = ndx.dimension(function(d){
+            return [d.Screentime,d.Character];
+        })
+        var experienceCharacterGroup = experienceDim.group();
+        
+        var minExperience = eDim.bottom(1)[0].Screentime;
+        var maxExperience = eDim.top(1)[0].Screentime;
+        
+        dc.scatterPlot("#screenTime")
+            .width(300)
+            .height(350)
+            .x(d3.scale.linear().domain([minExperience, maxExperience]))
+            .brushOn(false)        
+            .symbolSize(8)
+            .clipPadding(10)
+            .yAxisLabel("Characters")
+            .xAxisLabel("Amount of Screentime")
+            .title(function(d){
+                return "On screen for" + d.key[1];
+            })
+            
+            .dimension(experienceDim)
+            .group(experienceCharacterGroup)
+            .margins({top: 10,right: 50, bottom: 60, left: 30});
+            
+     }
+         
+     
+     
+     
+     
+     
+     
