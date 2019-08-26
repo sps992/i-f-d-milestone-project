@@ -1,11 +1,20 @@
 /*-- containers --*/
+
+    .col-md-12,.col-md-6{
+        text-align:center;
+    }
+
     .content-container{
         padding-top:108px;
     }
+    
 /*-- content --*/
 
-
-
+    .navbar-header{
+        width: 100%;
+        text-align: center;
+        font-weight: 800;
+    }
     .hero-image {
     
         background-image: url("../images/hero_img.jpg");
@@ -39,6 +48,10 @@
         margin:0 10px 0 10px; 
     }
 
+    .reset{
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
 /*-- Charts --*/
     
     .graph-label{
@@ -52,9 +65,14 @@
     }
     
     #houseMenu{
-        padding-bottom: 20px
+        padding-bottom: 20px;
+        float:none;
+        
     }
     
+    .dc-select-menu{
+        width:50%;
+    }
      .axis.y {
         
         fill:white;
@@ -85,6 +103,7 @@
 
 
 /*-- Footer --*/
+
     .footerContainer{
         width:100%; 
         Height:50px;
@@ -92,7 +111,7 @@
     }
 
     .copyright{
-        padding-left:10px;
+        text-align: center;
     }
     
     .copyright p{
@@ -100,3 +119,11 @@
         margin-bottom: 10px;
         
     }
+    
+/*-- Media Queries --*/
+
+@media (max-width: 500px){
+    .dc-select-menu{
+        width:100%;
+    }
+}

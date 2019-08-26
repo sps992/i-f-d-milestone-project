@@ -13,28 +13,13 @@ function makeGraphs(error, characterData) {
     show_death_stats(ndx);
     show_group_by_surname(ndx);
     show_higher_class_title(ndx);
-    show_screen_time(ndx);
     dc.renderAll();
 }
 
 
 
 
-function reset_graphs(){
-    d3.selectAll("svg").remove();
-   
 
-}
-
-
-$('#reset').click(function(e){
-
-    e.preventDefault();
-
-    reset_graphs();
-    
-
-});
 
 
 
@@ -157,36 +142,10 @@ function show_higher_class_title(ndx){
         .margins({top: 10, right: 100, bottom: 30, left: 30});
     
 }
+    
+    
 
-
-     function show_screen_time(ndx){
-        var eDim = ndx.dimension(dc.pluck("Screentime"));
-        var experienceDim = ndx.dimension(function(d){
-            return [d.Screentime,d.Character];
-        })
-        var experienceCharacterGroup = experienceDim.group();
-        
-        var minExperience = eDim.bottom(1)[0].Screentime;
-        var maxExperience = eDim.top(1)[0].Screentime;
-        
-        dc.scatterPlot("#screenTime")
-            .width(300)
-            .height(350)
-            .x(d3.scale.linear().domain([minExperience, maxExperience]))
-            .brushOn(false)        
-            .symbolSize(8)
-            .clipPadding(10)
-            .yAxisLabel("Characters")
-            .xAxisLabel("Amount of Screentime")
-            .title(function(d){
-                return "On screen for" + d.key[1];
-            })
-            
-            .dimension(experienceDim)
-            .group(experienceCharacterGroup)
-            .margins({top: 10,right: 50, bottom: 60, left: 30});
-            
-     }
+   
          
      
      
