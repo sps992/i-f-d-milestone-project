@@ -14,9 +14,9 @@ This website is designed for any GOT fan looking to keep the series alive by ana
  
 - As someone who has watched the series, I want to know more about who is still alive, so that I can better understand what actually happened and why certain characters are so important to the plot.
 
--As a big nerd, I want to find out more about who died and how many of each house is still alive, So I can quence my undying thirst for the series until the prequel comes out next year.
+- As a big nerd, I want to find out more about who died and how many of each house is still alive, So I can quence my undying thirst for the series until the prequel comes out next year.
 
--As someone who has watched a season, I want to view content that is entertaining and interesting, So I can decide whether to continue watching the series.
+- As someone who has watched a season, I want to view content that is entertaining and interesting, So I can decide whether to continue watching the series.
 
 
 #### Wireframes
@@ -31,13 +31,13 @@ https://github.com/sps992/i-f-d-milestone-project/tree/master/static/wireframes
 Hero image - 
 Custom Fav Icon -
 Interactive Graphs -
-
+Parallax sections
  
 ### Existing Features
 
 
 ### Features Left to Implement
-Parallax sections
+Due to time restraints I have stopped trying to code the scatterplot graph using the 
 
 ## Technologies Used
 
@@ -46,37 +46,55 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
 
+- [Dc.js](https://dc-js.github.io/dc.js/)
+    - The project uses **Dc.js** to create and animate dimensional charting using its own pre-built libraries.
+
+- [Crossfilter.js](https://github.com/crossfilter)
+    - The project uses **Crossfilter.js** for fast multidimensional filtering for coordinated views.
+
+- [Queue.js](https://github.com/d3/d3-queue)
+    - The project uses **Queue.js**  to run multiple javascript tasks simultaneously by creating a 'queue'.
+
+- [D3.js](https://github.com/d3/d3-queue)
+    - The project uses **D3.js**'s pre-built library to manipulate this project using a data set.
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+In this section, to convince the assessor that I have conducted enough testing to legitimately believe that the site works well, I will walk through my user stories from the **UX Section** and ensure they work as they should, leading the user to their appropriate goals.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+1. Client queries "How many highborn ladys are dead"
+    1. "Click" female from the pie chart
+    2. "Click" dead from the "death Tally" bar chart.
+    3. "Hover" over orange on "Highborn" stacked bar chart.
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+2. Client queries "How many male Baratheons are still alive"
+    1. "Click" male from the pie chart
+    2. "Click" alive from the bar chart
+    3. "Click" on the "House Selecter" dropdown menu, scroll to Baratheon
+    4. "Click" Baratheon, and look to see how many onthe dropdown are left (answer is 1).
+    
+ 3. Client wants to remove the filters he/she has added by clicking on the graph.
+    1. "Scroll" down past the active filters
+    2. "Press" reset button.
+    3. (On click, it removes all dc.js filters and renders all dc.js graphs).
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+### Nu Html Checker
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+I checked my code on the html checker to validate my code and make sure it falls inline with the **W3.org**.
+https://validator.w3.org/nu/?doc=https%3A%2F%2Fsps992.github.io%2Fi-f-d-milestone-project%2F
+If for any reason this link no longer works, please revert back to my screenshot here;
+https://github.com/sps992/i-f-d-milestone-project/blob/master/static/Nu_Html_checker/Nu-Html-checker.jpg
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+In this section I am going to describe the process I went through to deploy the project to a hosting platform.
+In this instance I used 'GitHub Pages' as my repository was hosted with GitHub so it feltlike the obvious choice.
+When pushing my code from IDE to GitHub, I used to three different methods. This was because, I had some trouble when changing from the old Cloud9 set up to the new AWS Cloud9. At first it went okay, but after the first initial commit I had problems with repository sending errors. To fix this quickly and simply, I started uploading manually direct to GitHub. This is why, you might see some variation on how I left my commit messages.
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
+To run my code locally, you would need to either download the repository to your P.C or alternatively click on the GitHub Pages link, located at the top of this page.
 
 
 ## Credits
