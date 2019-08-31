@@ -43,6 +43,7 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        background-attachment: fixed;
         width:100%;
         height:500px;
         border-bottom: solid 3px white;
@@ -54,6 +55,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-image: url("../images/Dark_Hedges.jpg");
+        background-attachment: fixed;
         width:100%;
         height:300px;
         border-top: solid 3px white;
