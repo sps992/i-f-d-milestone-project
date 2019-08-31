@@ -1,7 +1,7 @@
 # Surviving Game Of Thrones
 
 After the hurricane of the Game of Thrones series finale, what a better way to wrap it all up than with an interactive dashboard. Illustrating the deaths and surviving characters of the series, in well presented graphs.
-# Visit the project live here...
+### Visit the project live here...
 https://sps992.github.io/i-f-d-milestone-project/
 
 ## UX
@@ -28,20 +28,28 @@ https://github.com/sps992/i-f-d-milestone-project/tree/master/static/wireframes
 
 ## Features
 
-Hero image - 
-Custom Fav Icon -
-Interactive Graphs -
-Parallax sections
+1. Hero image - Builds a good first impression to draw in the users interest quickly. I personally think this is a great starting point on any website as a images speaks a thousand words. But make sure you have the css right otherwise it can easily have a negative effect. On this particular website dashboard, I have used one from Dubrovnik, Croatia. Which is where they shot 'Kings Landing' from Game of thrones.
+
+2. Custom Fav Icon - Using a favicon generator online (https://realfavicongenerator.net/) I have created a small crown icon, which is iconic from the series of books and television series. I feel favicons add a nice professional touch, whilst many people don't take much time thinking about them, I think its important to not overcomplicate the icon as most detail will be lost at its small size. 
+
+3. Interactive Graphs - The main focal point of this dashboard is the interactive graphs and the way they interact with the user as well as each other using filtered data. This was a big learning curve for me as I've not used this data driven technique before. I hope to experiment further with D3.js in the future as it has a large arsenal of uses and functionality. On the other hand, I do not feel I will take my new found knowledge of Dc.js any further as its dated and there are better alternatives out there which make life and coding easier. 
+
+4. Parallax sections - To add depth and break up the content into smaller sections, I have used a parallax effect on the **hero image** and the fact div on the dashboard. I am a bit mad for parallax sections, I feel they are a great way of breaking up large amounts of content and sprucing up the visual effects of a webpage. I love how it gives the background image a almost 3D feel.
  
 ### Existing Features
 
+1. Bootstrap Grid system - I have used a bootstrap framework for this build. Amongst other advantages of using a framework, I have greatly taken advantage of the built-in css grid system. It was great to organise the charts at different widths. I did however find that svg graphs weren't the best pleased with the system and at times try to ignore the css and destroy the responsive nature of the dashboard by not scaling their own widths and heights within the columns. This may be due to the nature of the specific 'width' and 'height' attributes, but maybe a problem for another day.  
 
 ### Features Left to Implement
-Due to time restraints I have stopped trying to code the scatterplot graph using the 
+
+Due to time restraints I have stopped trying to code the scatterplot graph using the csv. file I have made. After careful planning I have realised the data I have is not compatible with what is needed to make a scatterplot graph( or atleast, it is with my current knowledge base). If I was to do this project again from the start I would make csv.file that included a more flexible data set. This way I could have made more graphs and used more variation in the types I have used.
 
 ## Technologies Used
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+
+- [Bootstrap](https://getbootstrap.com/docs/3.3/)
+    - The project uses **Bootstrap**(3.3.7) as a front-end framework and helps in-turn to minimize coding time.
 
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
@@ -81,6 +89,7 @@ In this section, to convince the assessor that I have conducted enough testing t
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+
 ### Nu Html Checker
 
 I checked my code on the html checker to validate my code and make sure it falls inline with the **W3.org**.
@@ -99,12 +108,27 @@ To run my code locally, you would need to either download the repository to your
 
 ## Credits
 
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+I would like to thank my course mentor Jim Richmond for guiding me in the right direction and giving me good solid advice as always. 
 
-### Media
-- The photos used in this site were obtained from ...
+I would also like to thank Niel McEwan from Code institute support for helping me get unstuck after a couple of long nights of coding with the feeling of not getting anwhere.
+
+## Content
+
+All content is original unless stated below...
+
+#### Media
+
+Most media I used in this project was royalty free from websites like **Pexels**, but I would like to say that I do not own any of the rights to the Game of Thrones franchise. All rights reserved to HBO and George R.R.Martin.
+
+##### Photos
+
+For the hero image, I used a photo by Vincent Rivaud from Pexels https://www.pexels.com/photo/cityscape-uner-blue-sky-2473470/ 
+
+For the fact parallax image, I used a photo from Wikipedia( as I couldn't find a royalty free high resolution image). Which can be found here: https://en.wikipedia.org/wiki/Dark_Hedges#/media/File:Dark_Hedges_near_Armoy,_Co_Antrim_(cropped).jpg
+
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+I received my inspiration from watching the Game of Thrones boxset at the same time as starting this milestone project. I did alot of searching on Google and looking at infographics. This post on a website called 'Dorkly', caught my eye and really sparked my interest in propelling this project forward. You can find the article here: http://www.dorkly.com/post/73909/15-game-of-thrones-infographics-that-will-vastly-improve-your-watching-experience
+I also adapted my csv. file from sections of pre-built ones, one GitHub repository stood out as my main source. Which you can find here:
+https://github.com/jeffreylancaster/game-of-thrones
